@@ -35,6 +35,10 @@ class ofApp : public ofxiOSApp{
     
     float springiness;
     float windForce;
+    
+    
+    ofTrueTypeFont verdana14;
+    ofTrueTypeFont verdana11;
 
 };
 
