@@ -68,37 +68,37 @@ void vectorField::randomizeField(float scale){
 //------------------------------------------------------------------------------------
 void vectorField::draw(){
 	
-    float scalex = (float)externalWidth / (float)fieldWidth;
-    float scaley = (float)externalHeight / (float)fieldHeight;
-	
-    for (int i = 0; i < fieldWidth; i++){
-        for (int j = 0; j < fieldHeight; j++){
-
-            // pos in array
-            int pos = j * fieldWidth + i;
-            // pos externally
-            float px = 	i * scalex;
-            float py = 	j * scaley;
-            float px2 = px + field[pos].x * 5;
-            float py2 = py + field[pos].y * 5;
-			
-            ofLine(px ,py, px2, py2);
-			
-			
-			// draw an baseline to show direction
-			// get the line as vector, calculate length, then normalize. 
-			// rotate and draw based on length
-			
-			ofVec2f line;
-			line.set(px2-px, py2-py);
-			float length = line.length();
-			line.normalize();
-			line.rotate(90);  // these are angles in degrees
-			ofLine(px - line.x*length*0.2, py - line.y*length*0.2, px + line.x*length*0.2, py + line.y*length*0.2);
-			
-			
-        }
-    }
+//    float scalex = (float)externalWidth / (float)fieldWidth;
+//    float scaley = (float)externalHeight / (float)fieldHeight;
+//	
+//    for (int i = 0; i < fieldWidth; i++){
+//        for (int j = 0; j < fieldHeight; j++){
+//
+//            // pos in array
+//            int pos = j * fieldWidth + i;
+//            // pos externally
+//            float px = 	i * scalex;
+//            float py = 	j * scaley;
+//            float px2 = px + field[pos].x * 5;
+//            float py2 = py + field[pos].y * 5;
+//			
+//            ofLine(px ,py, px2, py2);
+//			
+//			
+//			// draw an baseline to show direction
+//			// get the line as vector, calculate length, then normalize. 
+//			// rotate and draw based on length
+//			
+//			ofVec2f line;
+//			line.set(px2-px, py2-py);
+//			float length = line.length();
+//			line.normalize();
+//			line.rotate(90);  // these are angles in degrees
+//			ofLine(px - line.x*length*0.2, py - line.y*length*0.2, px + line.x*length*0.2, py + line.y*length*0.2);
+//			
+//			
+//        }
+//    }
 }
 
 
