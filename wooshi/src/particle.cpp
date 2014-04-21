@@ -170,7 +170,7 @@ void particle::draw(){
 	ofSetColor(c);
 
     //ofCircle(pos.x, pos.y, 2);
-	ofSetLineWidth(3);
+	ofSetLineWidth(1.5);
 //	ofLine(pos.x, pos.y, prevPos.x+5, prevPos.y);
     ofNoFill();
     ofCircle(pos.x, pos.y, r);
